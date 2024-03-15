@@ -1,9 +1,12 @@
 ### 类究竟是个什么?
+
 - Function 是一个内建类型.
 - 类(class/function)是 Function 的实例(instance).
 - 类使用 function 关键字来定义(实例化一个Function).
 - 类的实例是用 new 关键字来创建: new.
+
 ~~~ javascript 
+
 // 定义一个 Person 类
 function Person(){
 	// 在构造函数中初始化类的 Fields
@@ -33,7 +36,9 @@ console.log(Person.prototype instanceof Object); // true
 ~~~
 
 ### 如何实例化类, 类的实例究竟是个什么样的?
+
 ~~~ javascript 
+
 // 实例化一个Person
 let sjs = new Person();
 // 检查sjs是谁的实例
@@ -49,7 +54,9 @@ console.log(sjs.prototype); // undefined, sjs是实例，不是类
 ~~~
 
 ### 额外知识点
+
 - 直接在Person中定义方法, 相当于C#定义的表态方法(static method), 如果要定义其实例能调用的方法, 则定义在 Person.prototype 中
+
 ``` js
 // Person 的静态方法
 Person.staticFunc = function(){
@@ -67,6 +74,7 @@ let person = new Person();
 ```
 
 - 类的构造函数不要写返回值, 这样在使用 new 关键字实例化时, 才能正确的实例化此类; 如果函数中带返回值, 则 new 关键字实例化时, 会返回此函数的返回值.
+
 ``` js
 
 // 定义一个带返回值的 function
@@ -82,6 +90,5 @@ let foo = new Foo();
 console.log(foo); // { desc: 'return a object' }
 console.log(foo == Foo.prototype); // false
 console.log(foo instanceof Foo); // false
-
 
 ```
