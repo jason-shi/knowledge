@@ -3,7 +3,7 @@
 - 类(class/function)是 Function 的实例(instance).
 - 类使用 function 关键字来定义(实例化一个Function).
 - 类的实例是用 new 关键字来创建: new.
-``` js
+~~~ javascript 
 // 定义一个 Person 类
 function Person(){
 	// 在构造函数中初始化类的 Fields
@@ -30,7 +30,7 @@ console.log(Person.prototype.__proto__ == Object.prototype); // true
 // 检查Person.prototype是否是Object的实例
 console.log(Person.prototype instanceof Object); // true
 
-```
+~~~
 
 ### 如何实例化类, 类的实例究竟是个什么样的?
 ``` js
