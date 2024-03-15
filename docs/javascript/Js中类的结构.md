@@ -33,7 +33,7 @@ console.log(Person.prototype instanceof Object); // true
 ~~~
 
 ### 如何实例化类, 类的实例究竟是个什么样的?
-``` js
+~~~ javascript 
 // 实例化一个Person
 let sjs = new Person();
 // 检查sjs是谁的实例
@@ -46,7 +46,7 @@ console.log(sjs.constructor == Person.prototype.constructor); // true
 // 检查sjs继承自谁
 console.log(sjs.prototype); // undefined, sjs是实例，不是类
 
-```
+~~~
 
 ### 额外知识点
 - 直接在Person中定义方法, 相当于C#定义的表态方法(static method), 如果要定义其实例能调用的方法, 则定义在 Person.prototype 中
